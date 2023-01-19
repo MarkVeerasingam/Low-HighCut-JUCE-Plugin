@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="aD945e" name="LowHighCut" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
+  <MAINGROUP id="JItEMq" name="LowHighCut">
+    <GROUP id="{21CA26DE-FE28-AA3E-DB29-FD8071EA233E}" name="Source">
+      <GROUP id="{E3028340-15EB-A7C7-D857-61D4E4884B11}" name="chowdsp_wdf">
+        <GROUP id="{A47FE9CF-FB8D-CDAA-6127-0FFB203084A6}" name="math">
+          <FILE id="sHLr6z" name="omega.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/math/omega.h"/>
+          <FILE id="GaN54P" name="sample_type.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/math/sample_type.h"/>
+          <FILE id="mTS6Cv" name="signum.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/math/signum.h"/>
+        </GROUP>
+        <GROUP id="{9AA62ED8-5C48-11EC-FDA5-84CD7EE60365}" name="rtype">
+          <FILE id="glvuRa" name="root_rtype_adaptor.h" compile="0" resource="0"
+                file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/rtype/root_rtype_adaptor.h"/>
+          <FILE id="INlpI9" name="rtype.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/rtype/rtype.h"/>
+          <FILE id="B1NylU" name="rtype_adaptor.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/rtype/rtype_adaptor.h"/>
+          <FILE id="bBPTsu" name="rtype_detail.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/rtype/rtype_detail.h"/>
+          <FILE id="aPRj73" name="wdf_rtype.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/rtype/wdf_rtype.h"/>
+        </GROUP>
+        <GROUP id="{26375129-318F-7830-5D7E-795F692D798A}" name="util">
+          <FILE id="iu070P" name="defer_impedance.h" compile="0" resource="0"
+                file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/util/defer_impedance.h"/>
+        </GROUP>
+        <GROUP id="{AF249B15-595E-FA2E-3F8A-6B5C7980F7F0}" name="wdf">
+          <FILE id="bn10VO" name="wdf.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/wdf/wdf.h"/>
+          <FILE id="MvNRxX" name="wdf_adaptors.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/wdf/wdf_adaptors.h"/>
+          <FILE id="oAfbiw" name="wdf_base.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/wdf/wdf_base.h"/>
+          <FILE id="dta9oT" name="wdf_nonlinearities.h" compile="0" resource="0"
+                file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/wdf/wdf_nonlinearities.h"/>
+          <FILE id="HoTDba" name="wdf_one_ports.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/wdf/wdf_one_ports.h"/>
+          <FILE id="sIQhxl" name="wdf_sources.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/wdf/wdf_sources.h"/>
+        </GROUP>
+        <GROUP id="{5DCD555E-2FC8-C773-D5AC-0A5BD3E8F575}" name="wdft">
+          <FILE id="F1w5Ur" name="wdft.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/wdft/wdft.h"/>
+          <FILE id="hTLrrb" name="wdft_adaptors.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/wdft/wdft_adaptors.h"/>
+          <FILE id="wpXio7" name="wdft_base.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/wdft/wdft_base.h"/>
+          <FILE id="zIaO6A" name="wdft_nonlinearities.h" compile="0" resource="0"
+                file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/wdft/wdft_nonlinearities.h"/>
+          <FILE id="EPhzuh" name="wdft_one_ports.h" compile="0" resource="0"
+                file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/wdft/wdft_one_ports.h"/>
+          <FILE id="u5hNcB" name="wdft_sources.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/wdft/wdft_sources.h"/>
+        </GROUP>
+        <FILE id="o3PeQa" name="chowdsp_wdf.h" compile="0" resource="0" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/chowdsp_wdf.h"/>
+        <FILE id="w0eg3h" name="README.md" compile="0" resource="1" file="../../Libraries/chowdsp/chowdsp_wdf/include/chowdsp_wdf/README.md"/>
+      </GROUP>
+      <FILE id="YjN0O2" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="xZWMRW" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="KcnpV8" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="RAFSnV" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="LowHighCut" headerPath="C:\Users\markv\Documents\JUCE Development\Libraries\chowdsp\chowdsp_wdf\include\chowdsp_wdf"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="LowHighCut"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../Downloads/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../Downloads/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../Downloads/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../Downloads/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../Downloads/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../Downloads/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../Downloads/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../Downloads/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../Downloads/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../Downloads/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../Downloads/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../Downloads/JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../../../Downloads/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2022>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+</JUCERPROJECT>

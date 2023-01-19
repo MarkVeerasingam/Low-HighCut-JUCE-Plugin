@@ -60,6 +60,14 @@ public:
     juce::AudioProcessorValueTreeState apvts{ *this,nullptr,"Parameters",createParameterLayout()};
 
 private:
+
+    using Filter = juce::dsp::IIR::Filter<float>; //iir has a response of 12 or 24 db
+    using CutFilter = juce::dsp::ProcessorChain<Filter, Filter, Filter, Filter>;//HP,LP,Peak,Shelf,Notch,Allpass,etc..
+    using MonoChain = juce::dsp::ProcessorChain<CutFilter, Filter, CutFilter>;
+    
+    //need 2 instances of MonoChain to do Stereo Processing
+    MonoChain leftChain, rightChain;
+
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (LowHighCutAudioProcessor)
 };

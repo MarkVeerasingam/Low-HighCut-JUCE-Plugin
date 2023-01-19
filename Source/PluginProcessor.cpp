@@ -94,8 +94,15 @@ void LowHighCutAudioProcessor::changeProgramName (int index, const juce::String&
 //==============================================================================
 void LowHighCutAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
+    juce::dsp::ProcessSpec spec;
+
+    spec.maximumBlockSize = samplesPerBlock;//needs to know max num of samples it will process at one time
+    spec.numChannels = 1;//monochains can only handle 1 channel audio
+    spec.sampleRate = sampleRate;//needs to know sample rate
+
+    //need to pass it to each chain & will be prepared & ready for processing
+    leftChain.prepare(spec);
+    rightChain.prepare(spec);
 }
 
 void LowHighCutAudioProcessor::releaseResources()
@@ -145,18 +152,16 @@ void LowHighCutAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
-    // This is the place where you'd normally do the guts of your plugin's
-    // audio processing...
-    // Make sure to reset the state if your inner loop is processing
-    // the samples and the outer loop is handling the channels.
-    // Alternatively, you can process the samples with the channels
-    // interleaved by keeping the same state.
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
-    {
-        auto* channelData = buffer.getWritePointer (channel);
+    juce::dsp::AudioBlock<float> block(buffer);//creates audioBlock that wraps this buffer
 
-        // ..do something to the data...
-    }
+    auto leftBlock = block.getSingleChannelBlock(0);
+    auto rightBlock = block.getSingleChannelBlock(1);
+
+    juce::dsp::ProcessContextReplacing<float> leftContext(leftBlock);
+    juce::dsp::ProcessContextReplacing<float> rightContext(rightBlock);
+
+    leftChain.process(leftContext);
+    rightChain.process(rightContext);
 }
 
 //==============================================================================
@@ -190,7 +195,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout LowHighCutAudioProcessor::cr
     juce::AudioProcessorValueTreeState::ParameterLayout layout;
     
     layout.add(std::make_unique<juce::AudioParameterFloat>("LowCut Freq", "lowcut freq",
-        juce::NormalisableRange<float>(20.f, 20000.f, 1.f, 1.f), 20.f));
+        juce::NormalisableRange<float>(20.f, 20000.f, 1.f, 1.f), 20.f)); 
     layout.add(std::make_unique<juce::AudioParameterFloat>("HighCut Freq", "highcut freq",
         juce::NormalisableRange<float>(20.f, 20000.f, 1.f, 1.f), 20000.f));
     /*layout.add(std::make_unique<juce::AudioParameterFloat>("Peak Freq", "peak freq",
